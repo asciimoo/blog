@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Adam Tauber'
 SITENAME = 'asciiblog'
-SITEURL = ''
+SITEURL = 'https://asciimoo.github.io/blog'
 RELATIVE_URLS = True
 
-SITELOGO = './images/logo.png'
+SITELOGO = SITEURL + '/images/logo.png'
 SITESUBTITLE = ""
 COPYRIGHT_YEAR = "2017"
 
@@ -20,8 +20,8 @@ TIMEZONE = 'Europe/Budapest'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -30,6 +30,7 @@ AUTHOR_FEED_RSS = None
 # LINKS = (('Code', 'https://github.com/asciimoo'),)
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/asciimoo'),)
+SOCIAL = (('github', 'https://github.com/asciimoo'),
+          ('rss', SITEURL + '/' + FEED_ALL_ATOM))
 
 DEFAULT_PAGINATION = 25
