@@ -2,9 +2,16 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'asciimoo'
-SITENAME = 'ab'
+AUTHOR = 'Adam Tauber'
+SITENAME = 'asciiblog'
 SITEURL = ''
+RELATIVE_URLS = True
+
+SITELOGO = './images/logo.png'
+SITESUBTITLE = ""
+COPYRIGHT_YEAR = "2017"
+
+THEME = 'Flex'
 
 PATH = 'content'
 
@@ -20,16 +27,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+# LINKS = (('Code', 'https://github.com/asciimoo'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'https://github.com/asciimoo'),)
 
 DEFAULT_PAGINATION = 25
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
