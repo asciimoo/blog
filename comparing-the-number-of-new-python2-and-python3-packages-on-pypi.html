@@ -22,11 +22,11 @@
 
 
 <meta name="author" content="Adam Tauber" />
-<meta name="description" content="I didn't found information about the current activity around different Python versions. So, I decided to periodically collect the number of PyPi packages from the official site to get insight to the current popularity of Python2 vs. Python3. Here are the results: Technical details The number of packages in PyPi …" />
+<meta name="description" content="I didn't found information about the current activity around different Python versions. So, I decided to periodically collect the number of PyPI packages from the official site to get insight to the current popularity of Python2 vs. Python3. Here are the results: Technical details The number of packages in PyPi …" />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="asciiblog"/>
 <meta property="og:title" content="Comparing the number of new Python2 and Python3 packages on PyPi"/>
-<meta property="og:description" content="I didn't found information about the current activity around different Python versions. So, I decided to periodically collect the number of PyPi packages from the official site to get insight to the current popularity of Python2 vs. Python3. Here are the results: Technical details The number of packages in PyPi …"/>
+<meta property="og:description" content="I didn't found information about the current activity around different Python versions. So, I decided to periodically collect the number of PyPI packages from the official site to get insight to the current popularity of Python2 vs. Python3. Here are the results: Technical details The number of packages in PyPi …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="./comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html"/>
 <meta property="og:type" content="article"/>
@@ -73,8 +73,8 @@
 
   <div>
     <p>I didn't found information about the current activity around different Python versions.
-So, I decided to periodically collect the number of PyPi packages from the official
-site to get insight to the current popularity of Python2 vs. Python3.</p>
+So, I decided to periodically collect the number of PyPI packages from the <a href="https://pypi.python.org/pypi">official
+site</a> to get insight to the current popularity of Python2 vs. Python3.</p>
 <p>Here are the results:
 <img alt="Number of new Python2 and Python3 packages on PyPi" src="./images/pypi_py2_vs_py3.png"></p>
 <h3>Technical details</h3>
@@ -106,6 +106,9 @@ site to get insight to the current popularity of Python2 vs. Python3.</p>
 
 
 <h4>Plotting the results</h4>
+<p>The chart was created with <a href="http://matplotlib.org/">matplotlib</a>.
+Custom <a href="https://github.com/asciimoo/dotfiles/blob/master/matplotlib/matplotlibrc">configuration</a>
+is available in my <a href="https://github.com/asciimoo/dotfiles">dotfiles repo</a>.</p>
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>

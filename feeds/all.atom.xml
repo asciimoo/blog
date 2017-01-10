@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>asciiblog</title><link href="https://asciimoo.github.io/blog/" rel="alternate"></link><link href="https://asciimoo.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://asciimoo.github.io/blog/</id><updated>2017-01-08T23:23:00+01:00</updated><entry><title>Comparing the number of new Python2 and Python3 packages on PyPi</title><link href="https://asciimoo.github.io/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html" rel="alternate"></link><published>2017-01-08T23:23:00+01:00</published><updated>2017-01-08T23:23:00+01:00</updated><author><name>Adam Tauber</name></author><id>tag:asciimoo.github.io,2017-01-08:/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html</id><summary type="html">&lt;p&gt;I didn't found information about the current activity around different Python versions.
-So, I decided to periodically collect the number of PyPi packages from the official
-site to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
+So, I decided to periodically collect the number of PyPI packages from the &lt;a href="https://pypi.python.org/pypi"&gt;official
+site&lt;/a&gt; to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
 &lt;p&gt;Here are the results:
 &lt;img alt="Number of new Python2 and Python3 packages on PyPi" src="https://asciimoo.github.io/blog/images/pypi_py2_vs_py3.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Technical details&lt;/h3&gt;
 &lt;p&gt;The number of packages in PyPi …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I didn't found information about the current activity around different Python versions.
-So, I decided to periodically collect the number of PyPi packages from the official
-site to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
+So, I decided to periodically collect the number of PyPI packages from the &lt;a href="https://pypi.python.org/pypi"&gt;official
+site&lt;/a&gt; to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
 &lt;p&gt;Here are the results:
 &lt;img alt="Number of new Python2 and Python3 packages on PyPi" src="https://asciimoo.github.io/blog/images/pypi_py2_vs_py3.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Technical details&lt;/h3&gt;
@@ -39,6 +39,9 @@ site to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
 
 
 &lt;h4&gt;Plotting the results&lt;/h4&gt;
+&lt;p&gt;The chart was created with &lt;a href="http://matplotlib.org/"&gt;matplotlib&lt;/a&gt;.
+Custom &lt;a href="https://github.com/asciimoo/dotfiles/blob/master/matplotlib/matplotlibrc"&gt;configuration&lt;/a&gt;
+is available in my &lt;a href="https://github.com/asciimoo/dotfiles"&gt;dotfiles repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;collections&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;defaultdict&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;
