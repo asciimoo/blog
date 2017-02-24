@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>asciiblog</title><link href="https://asciimoo.github.io/blog/" rel="alternate"></link><link href="https://asciimoo.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://asciimoo.github.io/blog/</id><updated>2017-01-08T23:23:00+01:00</updated><entry><title>Comparing the number of new Python2 and Python3 packages on PyPi</title><link href="https://asciimoo.github.io/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html" rel="alternate"></link><published>2017-01-08T23:23:00+01:00</published><updated>2017-01-08T23:23:00+01:00</updated><author><name>Adam Tauber</name></author><id>tag:asciimoo.github.io,2017-01-08:/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html</id><summary type="html">&lt;p&gt;I didn't found information about the current activity around different Python versions.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>asciiblog</title><link href="https://asciimoo.github.io/blog/" rel="alternate"></link><link href="https://asciimoo.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>https://asciimoo.github.io/blog/</id><updated>2017-02-24T15:23:00+01:00</updated><entry><title>Static linking Go binaries</title><link href="https://asciimoo.github.io/blog/static-linking-go-binaries.html" rel="alternate"></link><published>2017-02-24T15:23:00+01:00</published><updated>2017-02-24T15:23:00+01:00</updated><author><name>Adam Tauber</name></author><id>tag:asciimoo.github.io,2017-02-24:/blog/static-linking-go-binaries.html</id><summary type="html">&lt;p&gt;By default, go (&amp;lt;=1.8) compiles a dynamic linked binary if you run &lt;code&gt;go build&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It can be verified with the &lt;code&gt;file&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ file go_executable
+go_executable: ELF &lt;span class="m"&gt;64&lt;/span&gt;-bit LSB executable, x86-64, version &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;SYSV&lt;span class="o"&gt;)&lt;/span&gt;, dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add &lt;code&gt;-ldflags "-linkmode external …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;By default, go (&amp;lt;=1.8) compiles a dynamic linked binary if you run &lt;code&gt;go build&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;It can be verified with the &lt;code&gt;file&lt;/code&gt; command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ file go_executable
+go_executable: ELF &lt;span class="m"&gt;64&lt;/span&gt;-bit LSB executable, x86-64, version &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;SYSV&lt;span class="o"&gt;)&lt;/span&gt;, dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Add &lt;code&gt;-ldflags "-linkmode external -extldflags -static"&lt;/code&gt; argument to the &lt;code&gt;go build&lt;/code&gt; command, to build static linked binaries.&lt;/p&gt;
+&lt;p&gt;It produces the following executable:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ file go_executable
+go_executable: ELF &lt;span class="m"&gt;64&lt;/span&gt;-bit LSB executable, x86-64, version &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;SYSV&lt;span class="o"&gt;)&lt;/span&gt;, statically linked, not stripped, with debug_info
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Comparing the number of new Python2 and Python3 packages on PyPi</title><link href="https://asciimoo.github.io/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html" rel="alternate"></link><published>2017-01-08T23:23:00+01:00</published><updated>2017-01-08T23:23:00+01:00</updated><author><name>Adam Tauber</name></author><id>tag:asciimoo.github.io,2017-01-08:/blog/comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html</id><summary type="html">&lt;p&gt;I didn't found information about the current activity around different Python versions.
 So, I decided to periodically collect the number of PyPI packages from the &lt;a href="https://pypi.python.org/pypi"&gt;official
 site&lt;/a&gt; to get insight to the current popularity of Python2 vs. Python3.&lt;/p&gt;
 &lt;p&gt;Here are the results:

@@ -21,17 +21,22 @@
   <meta name="robots" content="" />
 
 
-    <meta name="author" content="Adam Tauber" />
-    <meta name="description" content="" />
+<meta name="author" content="Adam Tauber" />
+<meta name="description" content="By default, go (<=1.8) compiles a dynamic linked binary if you run go build. It can be verified with the file command: $ file go_executable go_executable: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info Add -ldflags "-linkmode external …" />
+<meta name="keywords" content="">
 <meta property="og:site_name" content="asciiblog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="asciiblog"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="Static linking Go binaries"/>
+<meta property="og:description" content="By default, go (<=1.8) compiles a dynamic linked binary if you run go build. It can be verified with the file command: $ file go_executable go_executable: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info Add -ldflags "-linkmode external …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="."/>
+<meta property="og:url" content="./static-linking-go-binaries.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-02-24 15:23:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/adam-tauber.html">
+<meta property="article:section" content="go"/>
 <meta property="og:image" content="https://asciimoo.github.io/blog/images/logo.png">
 
-  <title>asciiblog</title>
+  <title>asciiblog &ndash; Static linking Go binaries</title>
 
 </head>
 <body>
@@ -55,62 +60,40 @@
   <main>
 
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="./static-linking-go-binaries.html#static-linking-go-binaries">Static linking Go binaries</a></h2>
+    <h1 id="static-linking-go-binaries">Static linking Go binaries</h1>
     <p>
           Posted on Fri 24 February 2017 in <a href="./category/go.html">go</a>
 
 
-
     </p>
   </header>
+
+
   <div>
-      <p>By default, go (&lt;=1.8) compiles a dynamic linked binary if you run <code>go build</code>.</p>
+    <p>By default, go (&lt;=1.8) compiles a dynamic linked binary if you run <code>go build</code>.</p>
 <p>It can be verified with the <code>file</code> command:</p>
 <div class="highlight"><pre><span></span>$ file go_executable
 go_executable: ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info
 </pre></div>
 
 
-<p>Add <code>-ldflags "-linkmode external …</code></p>
-      <br>
-      <a class="btn" href="./static-linking-go-binaries.html#static-linking-go-binaries">    Continue reading
-</a>
+<p>Add <code>-ldflags "-linkmode external -extldflags -static"</code> argument to the <code>go build</code> command, to build static linked binaries.</p>
+<p>It produces the following executable:</p>
+<div class="highlight"><pre><span></span>$ file go_executable
+go_executable: ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped, with debug_info
+</pre></div>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html#comparing-the-number-of-new-python2-and-python3-packages-on-pypi">Comparing the number of new Python2 and Python3 packages on PyPi</a></h2>
+  <div class="tag-cloud">
     <p>
-          Posted on Sun 08 January 2017 in <a href="./category/python.html">Python</a>
-
-
-
     </p>
-  </header>
-  <div>
-      <p>I didn't found information about the current activity around different Python versions.
-So, I decided to periodically collect the number of PyPI packages from the <a href="https://pypi.python.org/pypi">official
-site</a> to get insight to the current popularity of Python2 vs. Python3.</p>
-<p>Here are the results:
-<img alt="Number of new Python2 and Python3 packages on PyPi" src="./images/pypi_py2_vs_py3.png"></p>
-<h3>Technical details</h3>
-<p>The number of packages in PyPi …</p>
-      <br>
-      <a class="btn" href="./comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html#comparing-the-number-of-new-python2-and-python3-packages-on-pypi">    Continue reading
-</a>
   </div>
+
+
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>&copy; Adam Tauber 2017</p>

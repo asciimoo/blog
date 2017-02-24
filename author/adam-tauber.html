@@ -60,6 +60,31 @@
 
 <article>
   <header>
+    <h2><a href="../static-linking-go-binaries.html#static-linking-go-binaries">Static linking Go binaries</a></h2>
+    <p>
+          Posted on Fri 24 February 2017 in <a href="../category/go.html">go</a>
+
+
+
+    </p>
+  </header>
+  <div>
+      <p>By default, go (&lt;=1.8) compiles a dynamic linked binary if you run <code>go build</code>.</p>
+<p>It can be verified with the <code>file</code> command:</p>
+<div class="highlight"><pre><span></span>$ file go_executable
+go_executable: ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked, interpreter /lib/ld-musl-x86_64.so.1, not stripped, with debug_info
+</pre></div>
+
+
+<p>Add <code>-ldflags "-linkmode external …</code></p>
+      <br>
+      <a class="btn" href="../static-linking-go-binaries.html#static-linking-go-binaries">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../comparing-the-number-of-new-python2-and-python3-packages-on-pypi.html#comparing-the-number-of-new-python2-and-python3-packages-on-pypi">Comparing the number of new Python2 and Python3 packages on PyPi</a></h2>
     <p>
           Posted on Sun 08 January 2017 in <a href="../category/python.html">Python</a>
@@ -108,5 +133,6 @@ site</a> to get insight to the current popularity of Python2 vs. Python3.</p>
   "description": ""
 }
 </script>
+  
 </body>
 </html>
